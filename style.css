@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700 &display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+
+:root {
+  font-size: 16px;
+  font-family: "DM MONO", monospace;
+  font-weight: 500;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #dfd3dd;
+}
+
+body {
+  background-color: #131316;
+  color: #ffffff;
+  overflow-x: hidden;
+
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+#about-me p {
+  text-align: center;
+  font-size: 1.2em;
+}
+#about-me h1,
+#about-me p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 10px 0;
+
+  font-family: "DM MONO", monospace;
+  font-size: 18px; /* Change the value according to what suits you */
+  font-weight: 700;
+}
+
+#about-me h1 {
+  font-size: 3.5em; /* Significantly larger font size */
+  font-weight: bold; /* Makes the font bolder */
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for depth */
+  margin-bottom: 20px; /* Adds some space below the name */
+}
+
+section {
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.projects {
+  display: flex;
+}
+
+.logo:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.logo:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.logo:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+/* navbar */
+
+main {
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: slategrey;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #ff7eee;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 9999;
+  background-color: var(--bg-primary);
+  transition: width 400ms ease;
+  overflow: scroll;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: cornsilk;
+  color: var(--text-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+/* .navbar:hover {
+  width: 16rem;
+} */
+
+/* .navbar:hover .link-text {
+  display: block;
+} */
+
+/* logo */
+
+.nav-link.active {
+  background-color: #333; /* or any desired style */
+}
+
+.navbar .navbar-nav .nav-item .nav-link.active svg,
+.navbar .navbar-nav .nav-item .nav-link.active svg * {
+  fill: #ff7eee !important;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+  width: 100%;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  /* transition: transform var(--transition-speed) */
+  transition: var(--transition-speed);
+}
+
+.logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+  transform: rotate(-180deg);
+}
+
+/* small screens */
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    z-index: 1000;
+    overflow: auto;
+  }
+  .nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* larger screen */
+
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity;
+  }
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
+
+svg path {
+  fill: #ff7eee;
+}
+
+.fa-secondary {
+  color: #df49a6;
+}
+svg path,
+.fa-secondary {
+  transition: var(--transition-speed);
+}
+
+#projects {
+  z-index: 2;
+  overflow-y: visible; /* Update this line */
+  text-align: center;
+}
+
+.section-title {
+  text-align: center;
+}
+#projects {
+  text-align: center; /* This will center the text and potentially other inline content */
+}
+/* Override for the "Skills" section */
+#skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* This will align the grid content to the top */
+}
+
+.skills {
+  position: relative;
+  padding-bottom: 50px; /* Ensure there's space for the mouseDown indicator */
+}
+
+#skills h1 {
+  text-align: center; /* This will center the h1 text */
+  width: 100%; /* This will make sure the text takes up the full width so it can be centered */
+  margin-top: 100px; /* Space above the h1 */
+  padding-top: 0; /* Removes top padding */
+  margin-bottom: 50px;
+}
+
+.skills h2 {
+  margin-bottom: 5rem;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills-container .skills-box {
+  width: 100px; /* or whatever width you desire */
+  height: 100px; /* or whatever height you desire */
+  background: var(--second-bg-color);
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--bg-color);
+  transition: 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container .skills-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+.skills-box i {
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.skills-box h3 {
+  font-family: "DM MONO", monospace;
+  font-size: 16px; /* Change the value according to what suits you */
+  font-weight: 700;
+}
+
+/* .skills-box p {
+  font-size: 0.6rem;
+  margin: 1rem 0 3rem;
+} */
+
+.skills-box svg {
+  width: 40px; /* Adjust this value as needed */
+  height: 40px; /* Adjust this value as needed */
+}
+
+.icons {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.icons li {
+  list-style: none;
+}
+.icons li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(0deg, #ddd, #fff);
+  transition: 0.5s;
+}
+
+.icons li a:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.icons li a .fab,
+.icons li a .fas {
+  width: 100%; /* Note: You had a typo here (widht) */
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+.icons li:nth-child(1) a:hover .fab {
+  color: #333333; /* Github */
+}
+
+.icons li:nth-child(2) a:hover .fas {
+  color: #0072c6; /* Email */
+}
+
+.icons li:nth-child(3) a:hover .fab {
+  color: #0077b5; /* LinkedIn */
+}
+/* 
+#blob {
+  background-color: white;
+  background: linear-gradient(to right, #ff7eee, mediumpurple);
+  height: 300px;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 50%;
+
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    50% {
+      scale: 1 1.5;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+  animation: rotate 20s infinite;
+  filter: blur(200px);
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  backdrop-filter: blur(200px);
+} */
+
+/* form */
+/* container{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+} */
+form {
+  background: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+form h3 {
+  color: #ff7eee;
+  font-weight: 800;
+  margin-bottom: 20px;
+  font-family: "DM MONO", monospace;
+}
+
+form input,
+form textarea {
+  font-family: "DM MONO", monospace;
+  border: 0;
+  margin: 10px 0;
+  padding: 20px;
+  outline: none;
+  border-radius: 5px;
+  background: #f5f5f5;
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  background: #ff7eee;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0;
+  border-radius: 30px;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .skills-box {
+    min-width: calc(50% - 20px); /* Two in a row */
+  }
+  .resume-button {
+    top: 40px; /* Adjust this value for small screens */
+    right: 40px; /* Adjust this value for small screens */
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .skills-box {
+    min-width: 100%; /* One in a row */
+  }
+  #projects {
+    height: auto !important;
+    overflow-y: visible !important;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
+
+/* Your existing CSS for other elements... */
+
+/* Existing animated-button CSS */
+.animated-button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffff40;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ... (other existing animated-button related CSS) */
+
+/* New CSS specific for the resume button */
+.resume-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10; /* Optional, if you want it to be above other elements */
+}
+
+/* Existing animated-button hover and other states */
+.animated-button:hover {
+  box-shadow: 0 0 0 5px #ffffff40;
+  color: #ffffff;
+}
+
+.animated-button:active {
+  transform: scale(
+    0.95
+  ); /* Changed from "scale: 0.95" to "transform: scale(0.95)" */
+}
+.animated-button:hover span:first-child {
+  color: #ffffff; /* Changes the text color to white */
+  position: relative;
+  z-index: 2;
+}
+
+.animated-button span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+.author-name a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from parent */
+  font-size: inherit; /* Inherit font size from parent */
+  font-weight: inherit; /* Inherit font weight from parent */
+  /* Add more styles if necessary */
+}
+
+/* Apply styles only on screens larger than 768px */
+@media (min-width: 769px) {
+  /* scroll button */
+  #about-me {
+    height: 100vh;
+    position: relative;
+  }
+
+  body {
+    font: 16px/1.6em Poppins, BlinkMacSystemFont, "-apple-system", "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif;
+    background: #111;
+    color: #fff;
+    text-align: center;
+  }
+
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #section1 {
+    background: #fff;
+    color: #111;
+  }
+
+  #section1 a {
+    color: #aaa;
+  }
+
+  /* MOUSE SCROLL ANIMATION */
+  .mouseDown {
+    font-size: 0.9em; /* CONTROL MOUSE SIZE */
+    border: 2px solid rgba(255, 255, 255, 1);
+    display: block;
+    width: 1.7em;
+    height: 2.8em;
+    border-radius: 0.9em;
+    margin: 0 auto;
+    text-decoration: none;
+    transition: border 0.2s ease-out;
+    position: absolute;
+    bottom: 30px; /* or adjust as needed */
+    left: 50%; /* or adjust as needed */
+    transform: translateX(-50%);
+  }
+
+  .mouseDown:hover {
+    border: 2px solid rgba(255, 255, 255, 0.7);
+  }
+
+  .mouseDown span {
+    display: block;
+    background: #fff;
+    width: 0.2em;
+    height: 0.3em;
+    margin: 0.7em auto 0;
+    border-radius: 0.4em;
+  }
+
+  .mouseDown span {
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+    animation-timing-function: cubic-bezier(0.65, -0.55, 0.25, 1.5);
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    will-change: transform;
+  }
+
+  .mouseDown:hover span {
+    -webkit-animation-duration: 0.7s;
+    animation-duration: 0.7s;
+  }
+  @-webkit-keyframes scroll {
+    0%,
+    20% {
+      -webkit-transform: translateY(0) scaleY(1);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(1.2em) scaleY(1.5);
+      opacity: 0.01;
+    }
+  }
+
+  @keyframes scroll {
+    0%,
+    20% {
+      transform: translateY(0) scaleY(1);
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(1.2em) scaleY(1.5);
+      opacity: 0.01;
+    }
+  }
+}
+
+/* stars */
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* tabs */
+
+.live-demo-link:hover {
+  color: #ff7eee; /* Replace newColor with your desired hover color */
+}
+
+ /* background-color: rgba(255, 255, 255, 0.5); */
+.hobby-box {
+    background-color: rgba(130, 84, 125, 0.73); /* Slightly transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Inner spacing around the text */
+    margin-top: 20px; /* Space above the box */
+    font-size: 0.8em; /* Smaller text size */
+    width: 60%; /* Smaller box width, adjust as necessary */
+    margin-left: auto; /* These two margin settings center the box */
+    margin-right: auto;
+}
+
+.name {
+    position: relative;
+    top: -180px;
+}
+.box {
+  background-color: rgba(130, 84, 125, 0.73); /* Slightly transparent purple background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Inner spacing around the text */
+  margin-top: -170px; /* Adjust if necessary to avoid overlap */
+  width: 90%; /* Increased responsive width */
+  margin-left: auto; /* Centering the box horizontally */
+  margin-right: auto;
+  color: #FFFFFF; /* High contrast text color for readability */
+  max-width: 600px; /* Increased optimal line length for a wider box */
+  font-size: 16px; /* Legible font size */
+}
+
+#about-me .box p {
+  font-family: Arial, Helvetica, sans-serif; /* Clean, readable font */
+  text-align: left; /* Easy-to-follow text alignment */
+  font-size: 16px; /* Consistent font size */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5); /* Softer text shadow for depth without blur */
+  line-height: 1.5; /* Adequate line spacing for readability */
+  margin-bottom: 1.5em; /* Spacing between paragraphs */
+  font-weight: 400; /* Regular weight for body text */
+}
+strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    width: 95%; /* Further increased width for smaller screens */
+    margin-top: 0; /* Adjust positioning on smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  #about-me .box p {
+    font-size: 14px; /* Slightly smaller font size for smaller screens */
+    line-height: 1.4; /* Adjust line height for smaller font size */
+  }
+}

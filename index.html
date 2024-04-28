@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Singh Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <!-- Include EmailJS script first -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Initialize EmailJS -->
+    <script type="text/javascript">
+        emailjs.init("e4QEYB2Lb1AT7xoWH");
+    </script>
+
+    <!-- Your other scripts -->
+    <script defer src="app.js"></script>
+    <script src="https://kit.fontawesome.com/61d5eeebab.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+</head>
+
+
+<body>
+    <!-- <div id="blob"></div>
+   <div id="blur"></div> -->
+
+
+    <nav class="navbar">
+        <ul class="navbar-nav">
+
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text">Naman Singh</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M470.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 256 265.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L210.7 256 73.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
+                    </svg>
+                </a>
+
+            </li>
+            <!-- about me -->
+            <li class="nav-item">
+                <a href="#about-me" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm208.4-48a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm128 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64z" />
+                    </svg>
+                    <span class="link-text">About Me</span>
+                </a>
+            </li>
+
+            <!-- projects  -->
+            <li class="nav-item">
+                <a href="#projects" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M32 32H480c17.7 0 32 14.3 32 32V96c0 17.7-14.3 32-32 32H32C14.3 128 0 113.7 0 96V64C0 46.3 14.3 32 32 32zm0 128H480V416c0 35.3-28.7 64-64 64H96c-35.3 0-64-28.7-64-64V160zm128 80c0 8.8 7.2 16 16 16H336c8.8 0 16-7.2 16-16s-7.2-16-16-16H176c-8.8 0-16 7.2-16 16z" />
+                    </svg>
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <!-- Skills  -->
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M176 88v40H336V88c0-4.4-3.6-8-8-8H184c-4.4 0-8 3.6-8 8zm-48 40V88c0-30.9 25.1-56 56-56H328c30.9 0 56 25.1 56 56v40h28.1c12.7 0 24.9 5.1 33.9 14.1l51.9 51.9c9 9 14.1 21.2 14.1 33.9V304H384V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H192V288c0-17.7-14.3-32-32-32s-32 14.3-32 32v16H0V227.9c0-12.7 5.1-24.9 14.1-33.9l51.9-51.9c9-9 21.2-14.1 33.9-14.1H128zM0 416V336H128v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H320v16c0 17.7 14.3 32 32 32s32-14.3 32-32V336H512v80c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64z" />
+                    </svg>
+                    <span class="link-text">Skills</span>
+                </a>
+            </li>
+
+            <!-- contact -->
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z" />
+                    </svg>
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+            <!-- Resume -->
+            <li class="nav-item">
+                <a href="./resume/namanResume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512">
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                            d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM216 232V334.1l31-31c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-72 72c-9.4 9.4-24.6 9.4-33.9 0l-72-72c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l31 31V232c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+                    </svg>
+                    <span class="link-text">Resume</span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
+    <main>
+        <a href="./resume/namanResume.pdf" target="_blank" rel="noopener noreferrer">
+            <button role="resume" class="resume-button animated-button">
+                <span>Resume</span>
+                <span></span>
+            </button>
+        </a>
+
+
+
+
+        <section id="about-me" class="hidden">
+            <canvas id="canvas"></canvas>
+
+            <div>
+                <div class="name">
+                    <p>Hi👋🏽, I'm</p>
+                    <h1>Naman Singh</h1>
+                    <p>Computer Engineering Student 🚀</p>
+                </div>
+
+
+
+                <div class="box">
+                    <p><strong>👩🏽‍💻 I enjoy solving problems, debugging, and writing clean reuseable code.</strong>
+                    </p>
+                    <p>🍎 A 3rd year Computer Engineering student . Mediocre, but gets the job done. I write posts and blogs myself to avoid repetitive generic AI content. Currently building projects and learning to deploy them .</p>
+
+
+                    <p>Beyond the screen, I enjoy discovering new hobbies. My current hobbies rotation includes 🏃🏽‍♀️
+                        workouts,
+                        ⚽ football, 🪡 Crochet, 📖 reading, and acquiring new skills.</p>
+                    <p> Currently, I am focused on learning how to write creatively and simultaneously
+                        pursuing a certification to become a Certified Devops engineer.</p>
+                </div>
+
+
+            </div>
+            <!--  -->
+
+
+
+
+
+            <ul class="icons">
+                <li><a href="https://github.com/namansingh1314" target="_blank" rel="noopener noreferrer"
+                        aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/naman-singh-a1a4b122b/" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="mailto:namannsingh1314@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i
+                            class="fas fa-envelope" aria-hidden="true"></i></a></li>
+                <li><a href="tel:+13479638176" aria-label="Call Me"><i class="fas fa-phone" aria-hidden="true"></i></a>
+                </li>
+            </ul>
+            <a class="mouseDown" href="#projects" title="Scroll Down">
+                <span></span>
+            </a>
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+        </section>
+
+        <section id="projects" class="card-list">
+            <div class="title-container hidden">
+                <h1 class="section-title">Featured Projects</h1>
+            </div>
+
+            <div class="card-container ">
+            </article>
+
+
+            <article class="card">
+                <header class="card-header">
+                    <p>
+                        <a href="https://github.com/namansingh1314/crazzio_jobs-website" class="project-link" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> Crazzio-Jobs&nbsp;
+                            
+                        </a>
+                    </p>
+                    <h2>Online jobs application portal ,collaborated with a colleague
+                    </h2>
+                </header>
+                <div class="card-author">
+                    <a class="author-avatar" href="https://tatpar2210.github.io/crazzio_jobs-website/" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="images/linkdn.png" />
+                    </a>
+                    <div class="author-name">
+                        <div class="author-name-prefix">Check it out</div>
+                        <a href="https://tatpar2210.github.io/crazzio_jobs-website/" class="live-demo-link" target="_blank"
+                            rel="noopener noreferrer">Live Demo
+                            🚀</a>
+
+                    </div>
+                </div>
+                <div class="tags">
+                    <a>React Js</a>
+                    <a>Tailwind</a>
+
+                </div>
+            </article>
+                <article class="card">
+                    <header class="card-header">
+                        <p>
+                            <a href="https://github.com/namansingh1314/coaching-institute" class="project-link"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> E-Coaching Institute&nbsp;
+                                <i class="fas fa-external-link"></i>
+                            </a>
+                        </p>
+                        <h2>A responsive Coaching Institute website hardcoded using Html Css Javascript</h2>
+                    </header>
+
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://namansingh1314.github.io/coaching-institute/" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="images/book.png" /> <!-- Update the image source -->
+                        </a>
+                        <div class="author-name">
+                            <div class="author-name-prefix">Check it out</div>
+                            <a href="https://namansingh1314.github.io/coaching-institute/" class="live-demo-link" target="_blank"
+                                rel="noopener noreferrer">Live Demo
+                                🚀</a>
+
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <a>ReactJS</a>
+                        <a>TailwindCSS</a>
+                        <a>Supabase</a>
+                    </div>
+                </article>
+                    <article class="card">
+                        <header class="card-header">
+                        <p>
+                            <a href="https://github.com/namansingh1314/Covid-detection-system" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Dibetic Retinopathy Detection&nbsp;
+                                <i class="fas fa-external-link"></i>
+                            </a>
+                        </p>
+                        <h2>An algorithm designed for Detection of Dibetic Retinopathy .</h2>
+
+                    </header>
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://github.com/namansingh1314/Dibetic-retinopathy" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="images/eye.png" />
+                        </a>
+                        <div class="author-name">
+                            <div class="author-name-prefix">Check it out</div>
+                            <a href="https://github.com/namansingh1314/Dibetic-retinopathy" class="live-demo-link" target="_blank"
+                                rel="noopener noreferrer">Source Code
+                                🚀</a>
+
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <a>Python</a>
+                        <a>Jupyter Noteebok</a>
+                        <a>Pytorch</a>
+
+                    </div>
+                </article>
+
+
+
+
+
+                <article class="card">
+                    <header class="card-header">
+                        <p>
+                            <a href="https://github.com/namansingh1314/certificate-genertor-" class="project-link"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Dummy Certificate Generator&nbsp;
+                                <i class="fas fa-external-link"></i>
+                            </a>
+                        </p>
+                        <h2>This project is made for the purpose of learning ,please do not misuse it! </h2>
+                    </header>
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://namansingh1314.github.io/certificate-genertor-" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="images/certificate.png" />
+                        </a>
+                        <div class="author-name">
+                            <div class="author-name-prefix">Check it out</div>
+                            <a href="https://namansingh1314.github.io/certificate-genertor-/" class="live-demo-link"
+                                target="_blank" rel="noopener noreferrer">Live Demo
+                                🚀</a>
+
+
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <a>RestApi</a>
+                        <a>Javascript</a>
+                        <a>css</a>
+                    </article>
+                    
+                <article class="card">
+                    <header class="card-header">
+                        <p>
+                            <a href="https://github.com/namansingh1314/Covid-detection-system" class="project-link" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="fa-brands fa-github"></i> Covid-19 Detection System&nbsp;
+                                <i class="fas fa-external-link"></i>
+                            </a>
+                        </p>
+                        <h2>An algorithm designed for Detection of Covid-19 in patients.</h2>
+
+                    </header>
+                    <div class="card-author">
+                        <a class="author-avatar" href="https://github.com/namansingh1314/Covid-detection-system" target="_blank"
+                            rel="noopener noreferrer">
+                            <img src="images/covid.png" />
+                        </a>
+                        <div class="author-name">
+                            <div class="author-name-prefix">Check it out</div>
+                            <a href="https://github.com/namansingh1314/Covid-detection-system" class="live-demo-link" target="_blank"
+                                rel="noopener noreferrer">Source Code
+                                🚀</a>
+
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <a>Python</a>
+                        <a>Tensorflow</a>
+                        <a>Keras</a>
+
+                    </div>
+                </article>
+                    </div>
+                    
+                
+
+
+            </div>
+            <a class="mouseDown" href="#skills" title="Scroll Down">
+                <span></span>
+            </a>
+        </section>
+        <section id="skills" class="skills hidden">
+            <h1>Skills</h1>
+
+
+            <div class="skills-container">
+                <div class="skills-box ">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Javascript</h3>
+                    <i class="fa-brands fa-square-js"></i>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>React</h3>
+                    <i class="fab fa-react"></i>
+                </div>
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Github</h3>
+                    <i class="fab fa-github"></i>
+                </div>
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Python</h3>
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>C/C++</h3>
+                    <i class="fa-solid fa-c"></i>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Git</h3>
+                    <i class="fa-brands fa-git-alt"></i>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Go-lang</h3>
+                    <img src="images/ts.svg" alt="TypeScript" style="width: 40px; height: 40px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Docker</h3>
+                    <img src="images/nextjs.svg" alt="nextjs" style="width: 45px; height: 45px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Kubernetes</h3>
+                    <img src="images/redux.svg" alt="redux" style="width: 45px; height: 45px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Scikit-learn</h3>
+                    <img src="images/pg.svg" alt="PostgreSQL" style="width: 45px; height: 45px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>NodeJS</h3>
+                    <img src="images/nodejs.svg" alt="NodeJS" style="width: 50px; height: 50px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>TailwindCSS</h3>
+                    <img src="images/tailwindcss.svg" alt="TailwindCSS" style="width: 50px; height: 50px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>AWS Cloud</h3>
+                    <img src="images/d3js-plain.svg" alt="d3.js" style="width: 45px; height: 45px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>CSS3</h3>
+                    <i class="fa-brands fa-css3-alt"></i>
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>MySQL</h3>
+                    <img src="images/mysql.svg" alt="MySQL" style="width: 55px; height: 55px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>MongoDB</h3>
+                    <img src="images/mongodb.svg" alt="MongoDB" style="width: 50px; height: 50px;">
+                </div>
+
+                <div class="skills-box">
+                    <i class='bx bxl-html5'></i>
+                    <h3>Tensorflow</h3>
+                    <img src="images/pytorch.svg" alt="Pytorch" style="width: 50px; height: 50px;">
+                </div>
+
+
+            </div>
+
+
+            <a class="mouseDown" href="#contact" title="Scroll Down">
+                <span></span>
+            </a>
+        </section>
+
+
+
+        <section id="contact" class="hidden">
+
+
+
+            <h1>Contact Me</h1>
+
+            <form id="contact-form">
+                <input type="text" id="name" name="user_name" placeholder="Name" required>
+                <input type="email" id="email" name="user_email" placeholder="Email" required>
+                <textarea id="message" rows="4" name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="overlay" id="successMessage">
+                <span>Message successfully sent!</span>
+            </div>
+        </section>
+
+
+        <script src="path/to/particles.js"></script>
+</body>
+
+</html>
