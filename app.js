@@ -35,7 +35,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    emailjs.sendForm("service_juvwhe7", "template_bb3dy8h", this).then(
+    emailjs.sendForm("service_qsu5iws", "template_si1vkis", this).then(
       function (response) {
         // Clear the form
         form.reset();
