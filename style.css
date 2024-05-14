@@ -801,4 +801,7 @@ strong {
     font-size: 14px; /* Slightly smaller font size for smaller screens */
     line-height: 1.4; /* Adjust line height for smaller font size */
   }
+  .name {
+    position: relative;
+}
 }
