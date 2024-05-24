@@ -288,6 +288,7 @@ svg path,
 
 .section-title {
   text-align: center;
+  padding-top:40px;
 }
 #projects {
   text-align: center; /* This will center the text and potentially other inline content */
@@ -368,7 +369,7 @@ svg path,
 
 .icons {
   position: absolute;
-  bottom: 100px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
@@ -759,10 +760,10 @@ form button {
     margin-right: auto;
 }
 
-.name {
+@media screen and (min-width: 768px){.name {
     position: relative;
-    top: -180px;
-}
+   top: -180px;
+}}
 .box {
   background-color: rgba(130, 84, 125, 0.73); /* Slightly transparent purple background */
   border-radius: 10px; /* Rounded corners */
