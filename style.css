@@ -45,6 +45,7 @@ body {
   font-weight: bold; /* Makes the font bolder */
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7); /* Optional: Adds a shadow for depth */
   margin-bottom: 20px; /* Adds some space below the name */
+  align-items:center;
 }
 
 section {
