@@ -78,6 +78,36 @@ section {
 .projects {
   display: flex;
 }
+#socials {min-height: 60vh;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+#socials h1 {
+  margin: 0; /* Remove default margin for the header */
+  padding: 10px 0; /* Optional padding for aesthetics */
+  text-align: center; /* Center the heading */
+}
+
+#socials .social-icons {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center the icons horizontally */
+  flex-wrap: wrap; /* Wrap the icons if they overflow */
+  gap: 10px; /* Space between icons */
+  padding: 10px 0; /* Padding around the icon container */
+}
+
+#socials .social-icons a {
+  display: inline-block; /* Make links inline-block for proper spacing */
+  text-decoration: none; /* Remove underline from links */
+}
+
+#socials .social-icons img {
+  width: 55px; /* Consistent width for icons */
+  height: 55px; /* Consistent height for icons */
+  display: block; /* Block display to remove whitespace below images */
+}
+
 
 .logo:nth-child(2) {
   transition-delay: 200ms;
@@ -117,7 +147,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 9999;
   background-color: var(--bg-primary);
   transition: width 400ms ease;
-  overflow: scroll;
+  overflow:hidden;
 }
 
 .navbar-nav {
