@@ -1,4 +1,8 @@
 //checking to see if new entry is visible in viewport, if it is then add class to it called show
+const publicKey = "w0kCCHGSLSujrCTZf";
+const serviceID = "service_qsu5iws";
+const templateID = "template_si1vkis";
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
