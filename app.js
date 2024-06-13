@@ -211,4 +211,7 @@ init();
 
 requestAnimationFrame(update);
 
+window.onload = function() {
+  document.getElementById('heading').classList.add('show');
+};
 //tabs
