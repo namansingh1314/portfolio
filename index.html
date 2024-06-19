@@ -652,7 +652,41 @@
 
 
         <section id="skills" class="skills hidden">
-            <h1>Skills</h1>
+            <title>Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+        }
+        h1 {
+            margin-right: 10px;
+        }
+        .info-button {
+            background-color: #545454;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 100px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Skills</h1>
+        <button class="info-button" onclick="showInfo()">i</button>
+    </div>
+
+    <script>
+        function showInfo() {
+            alert("To read the beginner's guide on my Medium blog, click on the skill logos.");
+        }
+    </script>
+</body>
 
             <div class="skills-container">
                 
