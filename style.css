@@ -873,26 +873,6 @@ strong {
   transition: all 200ms ease-in;
   transform: scale(1.5);
 }
-
-@media screen and (max-width: 768px) {
-  #experience-timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#experience-timeline div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
-}
-}
-element.style{
-	text-align:center;
-}
-
 /* General Container Styling */
 #experience {
   background-color: #1c1920; /* Dark background color */
@@ -902,33 +882,32 @@ element.style{
 #experience .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 20px;
 }
 
 /* Heading Styling */
 #experience #heading {
   color: white;
   text-align: center;
-  font-size: 36px;
-  margin-bottom: 50px;
+  font-size: 16px;
+  margin-bottom: 30px; /* Adjusted for spacing */
 }
 
 /* Experience Timeline Styling */
 .experience-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid columns */
+  gap: 20px;
 }
 
 /* Experience Item Styling */
 .experience-item {
-  background-color:#323946; /* Slightly lighter than the background */
+  background-color: #323946; /* Slightly lighter than the background */
   padding: 20px;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 20px;
   transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Ensures items stack vertically */
 }
 
 .experience-item:hover {
@@ -940,79 +919,75 @@ element.style{
 }
 
 .experience-item img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   border-radius: 50%;
+  margin-bottom: 10px; /* Spacing below image */
 }
 
 /* Date Styling */
 .experience-date {
   color: #ecf0f1;
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 5px; /* Adjusted for spacing */
 }
 
 /* Text Styling */
 .experience-text h3 {
   color: #ecf0f1;
   margin: 0;
-  font-size: 22px;
+  font-size: 14px; /* Adjusted font size */
 }
 
 .experience-text h4 {
   color: #bdc3c7;
-  margin: 5px 0;
-  font-size: 18px;
+  margin: 3px 0; /* Adjusted margin */
+  font-size: 14px;
 }
 
 .experience-text p {
   color: #ecf0f1;
-  margin: 10px 0 0;
-  font-size: 16px;
-  line-height: 1.5;
+  margin: 5px 0 0; /* Adjusted margin */
+  font-size: 14px; /* Adjusted font size */
+  line-height: 1.4; /* Adjusted line height */
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-  .experience-item {
-      flex-direction: column;
-      align-items: flex-start;
+  .experience-timeline {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
   }
 
-  .experience-item img {
-      width: 60px;
-      height: 60px;
-  }
-
-  .experience-text {
-      margin-top: 15px;
-  }
+  
 }
 
-@media (max-width: 480px) {
-  #experience #heading {
-      font-size: 28px;
+@media (min-width: 769px) {
+  /* Desktop View - Two-column Layout */
+  .experience-timeline {
+    grid-template-columns: repeat(2, 1fr); /* Two-column grid */
   }
 
   .experience-item {
-      padding: 15px;
+    margin-bottom: 20px;
   }
 
   .experience-item img {
-      width: 50px;
-      height: 50px;
+    width: 40px; /* Adjusted image size */
+    height: 40px;
+    margin-bottom: 5px; /* Adjusted spacing */
   }
 
   .experience-text h3 {
-      font-size: 20px;
+    font-size: 15px; /* Adjusted font size */
   }
 
   .experience-text h4 {
-      font-size: 16px;
+    font-size: 12px; /* Adjusted font size */
   }
 
   .experience-text p {
-      font-size: 14px;
+    font-size: 10px; /* Adjusted font size */
+    line-height: 1.4; /* Adjusted line height */
   }
 }
