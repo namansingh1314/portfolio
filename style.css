@@ -991,3 +991,7 @@ strong {
     line-height: 1.4; /* Adjusted line height */
   }
 }
+.name {
+  text-align: center; /* Center-aligns all content within the div */
+  margin-top: 50px; /* Adds space above the content */
+  padding: 20px; }

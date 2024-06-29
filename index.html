@@ -34,7 +34,34 @@
 <body>
     <!-- <div id="blob"></div>
    <div id="blur"></div> -->
+   <style>
+    /* Inline CSS */
+    .resume-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-image: url('images/me.jpg'); /* Path to your background image */
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        color: #ffffff; /* Text color */
+        font-size: 18px;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition: color 0.3s ease; /* Smooth transition for color */
+    }
 
+    .resume-button:hover {
+        color: transparent; /* Make text color transparent on hover */
+    }
+
+    .resume-button span {
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+</style>
 
     <nav class="navbar">
         <ul class="navbar-nav">
@@ -138,7 +165,7 @@
     <main>
         <a href="./Namann_CV.pdf" target="_blank" rel="noopener noreferrer">
             <button role="resume" class="resume-button animated-button">
-                <span>Resume</span>
+                <span>Download</span>
                 <span></span>
             </button>
         </a>
@@ -150,10 +177,8 @@
             <canvas id="canvas"></canvas>
 
             <div>
+
                 <div class="name">
-
-
-                    
                     <p>Hi, I am</p>
                     <h1>Naman Singh</h1>
                     <p>Computer Engineering Student</p>
