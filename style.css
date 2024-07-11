@@ -51,7 +51,7 @@ section {
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 100vh;
+  
 }
 
 .hidden {
@@ -952,46 +952,164 @@ strong {
   font-size: 14px; /* Adjusted font size */
   line-height: 1.4; /* Adjusted line height */
 }
+.slider {
+  position: relative;
+  width: 90%; /* Adjust the width as needed */
+  max-width: 1200px; /* Set a maximum width */
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
 
-/* Responsive Styling */
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images cover the container */
+}
+
+.caption {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+/* Navigation buttons */
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Default styles for captions outside the box */
+.caption {
+  position: static;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 5px;
+  max-width: 90%;
+  box-sizing: border-box;
+}
+
+/* Style for caption links */
+.caption-link {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  max-width: 90%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* General styles for the slider */
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Ensure images cover the container */
+}
+
+/* Navigation buttons */
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .experience-timeline {
-    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  button {
+      padding: 12px;
   }
 
-  
-}
-
-@media (min-width: 769px) {
-  /* Desktop View - Two-column Layout */
-  .experience-timeline {
-    grid-template-columns: repeat(2, 1fr); /* Two-column grid */
+  .slide img {
+      height: 300px; /* Adjust height for smaller screens */
   }
 
-  .experience-item {
-    margin-bottom: 20px;
-  }
-
-  .experience-item img {
-    width: 40px; /* Adjusted image size */
-    height: 40px;
-    margin-bottom: 5px; /* Adjusted spacing */
-  }
-
-  .experience-text h3 {
-    font-size: 15px; /* Adjusted font size */
-  }
-
-  .experience-text h4 {
-    font-size: 12px; /* Adjusted font size */
-  }
-
-  .experience-text p {
-    font-size: 10px; /* Adjusted font size */
-    line-height: 1.4; /* Adjusted line height */
+  .feats {
+      height: 500px !important; /* Increased height for smaller screens */
   }
 }
-.name {
-  text-align: center; /* Center-aligns all content within the div */
-  margin-top: 50px; /* Adds space above the content */
-  padding: 20px; }
+
+@media (max-width: 480px) {
+  button {
+      padding: 10px;
+  }
+
+  .slide img {
+      height: 200px; /* Adjust height for smaller screens */
+  }
+
+ 
+}

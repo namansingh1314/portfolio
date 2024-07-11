@@ -215,3 +215,24 @@ window.onload = function() {
   document.getElementById('heading').classList.add('show');
 };
 //tabs
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function moveSlide(step) {
+    slides[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + step + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    updateSliderPosition();
+}
+
+function updateSliderPosition() {
+    const slidesContainer = document.querySelector('.slides');
+    const slideWidth = slides[currentIndex].clientWidth;
+    slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    slides[currentIndex].classList.add('active');
+    updateSliderPosition();
+    window.addEventListener('resize', updateSliderPosition);
+});
