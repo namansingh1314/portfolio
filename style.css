@@ -76,7 +76,7 @@ section {
 .projects {
   display: flex;
 }
-#socials {min-height: 60vh;
+#socials {min-height: 40vh;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
 }
@@ -1112,4 +1112,7 @@ button:hover {
   }
 
  
+}
+h1 {
+  text-align: center;
 }
