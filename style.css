@@ -889,15 +889,15 @@ strong {
 #experience #heading {
   color: white;
   text-align: center;
-  font-size: 16px;
+  font-size: 12px;
   margin-bottom: 30px; /* Adjusted for spacing */
 }
 
 /* Experience Timeline Styling */
 .experience-timeline {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust grid columns */
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust grid columns */
+  gap: 10px;
 }
 
 /* Experience Item Styling */
@@ -937,7 +937,7 @@ strong {
 .experience-text h3 {
   color: #ecf0f1;
   margin: 0;
-  font-size: 14px; /* Adjusted font size */
+  font-size: 10px; /* Adjusted font size */
 }
 
 .experience-text h4 {
@@ -949,7 +949,7 @@ strong {
 .experience-text p {
   color: #ecf0f1;
   margin: 5px 0 0; /* Adjusted margin */
-  font-size: 14px; /* Adjusted font size */
+  font-size: 10px; /* Adjusted font size */
   line-height: 1.4; /* Adjusted line height */
 }
 .slider {
