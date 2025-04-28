@@ -1116,3 +1116,167 @@ button:hover {
 h1 {
   text-align: center;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono&display=swap");
+
+.card,
+.card p,
+.card h2 {
+  color: white;
+  
+}
+
+.card-container {
+  display: flex;
+  padding: 3rem;
+  overflow-x: scroll;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: 380px;
+  width: calc(100% - 20px);
+  min-width: 250px;
+  padding: 1.5rem;
+  margin-left: 40px;
+
+  border-radius: 16px;
+
+  background: #1c1920;
+  box-shadow: -1rem 0 3rem #000;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+}
+
+.card:hover ~ .card {
+  transform: translateX(130px);
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card-author {
+  display: grid;
+  grid-template-columns: 75px 1fr;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.author-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.author-name-prefix {
+  font-weight: 700;
+  color: #7a7a8c;
+  cursor: default;
+}
+
+.card-header h2:hover {
+  background: linear-gradient(90deg, #ff8a00, #ff7eee);
+  text-shadow: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tags {
+  /* margin: 1rem 0; */
+  position: relative;
+  padding: 0.5rem 0 1rem;
+  line-height: 2;
+}
+
+.tags a {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  color: #7a7a8c;
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  border: 3px solid #28242f;
+  border-radius: 2rem;
+  padding: 0.2rem 0.85rem 0.25rem;
+  position: relative;
+  text-decoration: none;
+}
+
+.tags a:hover {
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  border-color: white;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+  }
+
+  .card {
+    width: calc(100% - 20px);
+    max-width: 480px;
+    height: auto;
+    margin: 1rem 0;
+    margin-left: 0; /* Remove the margin-left */
+  }
+
+  .card:not(:first-child) {
+    margin-left: 0; /* Override the -130px margin */
+  }
+
+  .card:hover,
+  .card:hover ~ .card {
+    transform: none; /* Disable the hover effect */
+  }
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children vertically */
+}
+
+.header-content {
+  display: flex;
+  align-items: center; /* Centers items vertically */
+}
+
+.project-link {
+  display: inline-flex; /* Use inline-flex for proper alignment */
+  align-items: center; /* Center align items vertically */
+  color: inherit; /* Inherit color from parent for consistency */
+  text-decoration: none; /* No underline by default */
+  font-family: inherit; /* Ensure font consistency */
+  font-size: inherit; /* Match the font size of surrounding text */
+}
+
+.project-link:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.fa-github {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.card-header h2 {
+  cursor: default; /* Changes the cursor to the default pointer */
+}
+
+.project-link .fas.fa-external-link-alt {
+  margin-left: 8px; /* Adds space to the left of the external link icon */
+}
